@@ -1,0 +1,41 @@
+.auth {
+     width: 100%;
+     height: 100vh;
+     &__container {
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+     }
+     &__sing-in {
+
+     }
+}
+
+.button {
+     width: 150px;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     column-gap: 10px;
+     padding: 5px 10px;
+     background-color: rgb(209, 209, 209);
+     border: 1px solid transparent;
+     transition: all 0.4s;
+     &__icon {
+          width: 50px;
+          height: 50px;
+          // background-color: rgb(58, 42, 210);
+          padding: 5px;
+     }
+     &__text {
+          font-weight: 700;
+          flex: 1 1 auto;
+          text-align: center;
+     }
+     &:hover {
+          background-color: rgb(230, 230, 230);
+          border: 1px solid rgb(200, 200, 200);
+     }
+}
+

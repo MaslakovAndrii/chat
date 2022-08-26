@@ -1,0 +1,73 @@
+.room {
+     flex: 1 1 auto;
+     display: flex;
+     flex-direction: column;
+     min-width: 500px;
+     &__top {
+          border-bottom: 1px solid #bdbdbd;
+          min-height: 80px;
+          background-color: #eeeeee;
+          display: flex;
+          align-items: flex-start;
+          column-gap: 20px;
+          padding: 15px;
+     }
+     &__full-name {
+     }
+     &__chat {
+          flex: 1 1 auto;
+          border-bottom: 1px solid #bdbdbd;
+          padding: 15px;
+     }
+     &__bottom {
+          min-height: 150px;
+          background-color: #eeeeee;
+          padding: 30px 30px;
+          display: flex;
+          align-items: center;
+     }
+     &__form {
+          position: relative;
+          width: 100%;
+          height: 50px;
+     }
+     &__input {
+          width: 100%;
+          height: 100%;
+          border-radius: 30px;
+          border: 1px solid #b9b9b9;
+          padding: 0 60px 0 15px;
+     }
+     &__enter-button {
+          position: absolute;
+          top: 50%;
+          right: 15px;
+          transform: translateY(-50%);
+          display: flex;
+          align-items: center;
+          border: none;
+          outline: none;
+          background-color: transparent;
+          cursor: pointer;
+          color: #9e9e9e;
+     }
+}
+
+.chat {
+     display: flex;
+     flex-direction: column;
+     justify-content: flex-end;
+     overflow-y: auto;
+     position: relative;
+     &__container {
+          max-height: 100%;
+          overflow-y: auto;
+     }
+     &__messages:empty::before {
+          content: "Нет сообщений";
+          display: block;
+          padding: 20px;
+          text-align: center;
+          color: gray;
+     }
+}
