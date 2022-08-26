@@ -1,16 +1,16 @@
 import React from 'react';
-import { Route, Routes, HashRouter } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 import { authRoutes, publicRoutes } from '../utils/routes';
 import { useSelector } from 'react-redux'
 
 
 const AppRouter = () => {
      const isAuth = useSelector(state => state.userReducer.userName)
-     
+
      let route;
 
      switch (!!isAuth) {
-          case true:  {
+          case true: {
                route = <Routes>
                     {authRoutes.map(({ path, element }) =>
                          <Route path={path} element={element} key={path} />
@@ -26,7 +26,7 @@ const AppRouter = () => {
                     )
                     }
                </Routes>
-               break     
+               break
           }
           default: route = console.log("ошибка");
      }
