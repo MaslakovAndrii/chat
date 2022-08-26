@@ -1,4 +1,4 @@
-import { HashRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes, BrowserRouter } from "react-router-dom";
 import AppRouters from "./components/AppRoutes";
 // import Auth from "./pages/Auth";
 // import Chats from "./pages/Chats";
@@ -8,7 +8,7 @@ import AppRouters from "./components/AppRoutes";
 function App() {
      return (
           <>
-               <HashRouter basename="/">
+               <HashRouter>
                     <AppRouters />
                     {/* <Routes>
                          <Route path='/' element={<Auth />}></Route>
