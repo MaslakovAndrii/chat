@@ -9,8 +9,10 @@ export const publicRoutes = [
           path: START_ROUTE,
           element: <Auth />
      },
-     
-     
+     {
+          path: '*',
+          element: <Navigate to={START_ROUTE}/>
+     }
 ]
 
 export const authRoutes = [
@@ -18,6 +20,9 @@ export const authRoutes = [
           path: CHAT_ROUTE,
           element: <Chats />
      },
-     
+     {
+          path: '*',
+          element: <Navigate to={CHAT_ROUTE}/>
+     }
 ]
 

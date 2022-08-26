@@ -19,7 +19,6 @@ const Auth = () => {
                dispatch(handleAuth(result.user.displayName))
           })
           navigate(CHAT_ROUTE, {replace: true})
-          // navigate(CHAT_ROUTE)
      }
 
      return (
