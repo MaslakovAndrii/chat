@@ -1,5 +1,2 @@
 export const  START_ROUTE = '/'
-// export const  REGISTRATION_ROUTE = '/registration'
-export const  AUTHORIZATION_ROUTE = '/authorization'
 export const  CHAT_ROUTE = '/chats'
-// export const  BLANK_CHAT_ROUTE = 'blank'
