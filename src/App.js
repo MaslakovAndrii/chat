@@ -1,4 +1,4 @@
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, HashRouter } from "react-router-dom";
 import AppRouters from "./components/AppRoutes";
 
 
@@ -6,9 +6,9 @@ import AppRouters from "./components/AppRoutes";
 function App() {
      return (
           <>
-               <BrowserRouter>
+               <HashRouter basename="/">
                     <AppRouters />
-               </BrowserRouter>
+               </HashRouter>
           </>
      );
 }

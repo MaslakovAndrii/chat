@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes, HashRouter } from 'react-router-dom'
 import { authRoutes, publicRoutes } from '../utils/routes';
 import { useSelector } from 'react-redux'
 

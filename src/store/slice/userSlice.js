@@ -4,7 +4,7 @@ import { createSlice } from '@reduxjs/toolkit'
 const userSlice = createSlice({
      name: 'room',
      initialState: {
-          userName: null,
+          userName: false,
      },
      reducers: {
           handleAuth(state, action) {
