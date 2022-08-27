@@ -1,4 +1,5 @@
 import { Navigate } from "react-router-dom"
+import Test from "../components/Test"
 import Auth from "../pages/Auth"
 import Chats from "../pages/Chats"
 import { CHAT_ROUTE, START_ROUTE } from "./const"
@@ -22,7 +23,7 @@ export const authRoutes = [
      },
      {
           path: '*',
-          element: <Navigate to={CHAT_ROUTE}/>
+          element: <Test/>
      }
 ]
 
