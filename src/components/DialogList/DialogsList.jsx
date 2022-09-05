@@ -1,13 +1,14 @@
 import React from 'react';
-import { useSelector } from 'react-redux'
+import { useSelector } from 'react-redux';
 
-import './DialogsList.scss'
+import './DialogsList.scss';
 
 import DialogItem from '../DialogItem/DialogItem';
 
 
 const DialogsList = () => {
-     const searchedContacts = useSelector(state => state.contactsListReducer.searchedContacts)
+
+     const searchedContacts = useSelector(state => state.contactsListReducer.searchedContacts);
 
      return (
           <ul className='dialogs-list'>

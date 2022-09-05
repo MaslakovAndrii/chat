@@ -1,22 +1,23 @@
 import React, { useEffect, useState } from 'react';
-import './Search.scss'
+import './Search.scss';
 import SearchIcon from '@mui/icons-material/Search';
-import { useDispatch } from 'react-redux'
-import { useDebounce } from '../../hooks/useDebounce'
+import { useDispatch, useSelector } from 'react-redux';
+import { useDebounce } from '../../hooks/useDebounce';
 import { searchContacts } from '../../store/slice/contactsSlice';
 
 const Search = () => {
-     const [search, setSearch] = useState('')
-     const debounced = useDebounce(search, 250)
-     const dispatch = useDispatch()
+     const [search, setSearch] = useState('');
+     const contacts = useSelector(state => state.contactsListReducer.contacts);
+     const debounced = useDebounce(search, 250);
+     const dispatch = useDispatch();
 
      function cleanForm() {
-          setSearch('')
+          setSearch('');
      }
 
      useEffect(() => {
-          dispatch(searchContacts(debounced))
-     }, [debounced, dispatch])
+          dispatch(searchContacts(debounced));
+     }, [debounced, dispatch, contacts])
 
      return (
           <div className='search'>

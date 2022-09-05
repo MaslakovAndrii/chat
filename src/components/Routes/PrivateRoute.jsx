@@ -5,7 +5,7 @@ import { START_ROUTE } from '../../utils/const';
 
 const PrivateRoute = ({ children }) => {
 
-     const isLogin = useSelector(state => state.userReducer.userName)
+     const isLogin = useSelector(state => state.userReducer.userName);
 
      return  isLogin ? children : <Navigate to={START_ROUTE} replace={true} />
 };

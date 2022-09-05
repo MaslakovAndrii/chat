@@ -1,12 +1,13 @@
 import React from 'react';
-import { useDispatch } from 'react-redux'
+import { useDispatch } from 'react-redux';
 import { handleAuth } from '../../store/slice/userSlice';
 import { auth, provider } from '../../firebase';
 import { signInWithPopup } from 'firebase/auth'
-import './Auth.scss';
 import { useNavigate } from 'react-router-dom';
 import { CHAT_ROUTE } from '../../utils/const';
-import googleIcon from '../../assets/icons/google_icon-icons.com_62736.png'
+
+import './Auth.scss';
+import googleIcon from '../../assets/icons/google_icon-icons.com_62736.png';
 
 
 const Auth = () => {

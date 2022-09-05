@@ -1,12 +1,11 @@
 import React, { useEffect } from 'react';
 
-
 import { Avatar } from '@mui/material';
 import './Room.scss'
 
 import AvatarIsActive from '../Avatar/AvatarIsActive';
-import Message from '../Message/Message'
-import RoomBottom from './Section/RoomBottom'
+import Message from '../Message/Message';
+import RoomBottom from './Section/RoomBottom';
 
 const Room = ({ messages, user }) => {
      const fullName = `${user.firstName} ${user.lastName}`;
@@ -21,7 +20,7 @@ const Room = ({ messages, user }) => {
           });
      }
      useEffect(() => {
-          lastMessageScroll()
+          lastMessageScroll();
      }, [messages])
 
      return (

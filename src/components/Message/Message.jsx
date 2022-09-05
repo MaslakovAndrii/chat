@@ -1,8 +1,10 @@
 import React from 'react';
+import { format } from 'date-fns';
+
 import { Avatar } from '@mui/material';
-import { format } from 'date-fns'
+import './Message.scss';
+
 import MessageIsMe from './MessageIsMe';
-import './Message.scss'
 
 
 const Message = ({ fullName, avatar, text, date, isMe }) => {
@@ -24,9 +26,6 @@ const Message = ({ fullName, avatar, text, date, isMe }) => {
                                         {text}
                                    </p>
                               </div>
-                              {/* <time className='message__time'>
-                                   {date}
-                              </time> */}
                               <time className='message__time'>
                                    {format(date, 'Pp')}
                               </time>

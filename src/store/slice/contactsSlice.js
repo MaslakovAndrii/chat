@@ -1,8 +1,8 @@
-import { createSlice } from '@reduxjs/toolkit'
-import Josefina from '../../assets/image/1.jpg'
-import Alice from '../../assets/image/2.jpeg'
-import Velazquez from '../../assets/image/3.jpeg'
-import Barrera from '../../assets/image/4.jpeg'
+import { createSlice } from '@reduxjs/toolkit';
+import Josefina from '../../assets/image/1.jpg';
+import Alice from '../../assets/image/2.jpeg';
+import Velazquez from '../../assets/image/3.jpeg';
+import Barrera from '../../assets/image/4.jpeg';
 
 const contactsSlice = createSlice({
      name: 'contactList',
@@ -20,21 +20,20 @@ const contactsSlice = createSlice({
                state.searchedContacts = state.contacts.filter(contact => {
                     const fullName = `${contact.firstName} ${contact.lastName}`;
                     return fullName.toLowerCase().includes(action.payload.toLowerCase()) && contact;
-
                })
           },
           setLastActivity(state, action) {
                const [id, time] = action.payload;
-               state.searchedContacts.forEach(element => {
+               state.contacts.forEach(element => {
                     if (element.id === id) {
                          element.lastActivity = time;
                     }
                });
           },
           changeSequence(state, action) {
-               const idx = state.searchedContacts.findIndex(contact => contact.id === action.payload)
-               const item = state.searchedContacts.splice(idx, 1)
-               state.searchedContacts.unshift(item[0])
+               const idx = state.contacts.findIndex(contact => contact.id === action.payload);
+               const item = state.contacts.splice(idx, 1);
+               state.contacts.unshift(item[0]);
           }
      }
 })

@@ -5,7 +5,7 @@ import { CHAT_ROUTE } from '../../utils/const';
 
 const PublicRoute = ({ children, restricted }) => {
 
-     const isLogin = useSelector(state => state.userReducer.userName)
+     const isLogin = useSelector(state => state.userReducer.userName);
 
      return (
           isLogin && !restricted

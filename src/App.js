@@ -1,8 +1,7 @@
-import { BrowserRouter, HashRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import PrivateRoute from "./components/Routes/PrivateRoute";
 import Chats from './pages/Chats';
 import Auth from './pages/Auth'
-// import AppRouters from "./components/Routes/AppRoutes";
 import { CHAT_ROUTE, START_ROUTE } from "./utils/const";
 import PublicRoute from "./components/Routes/PublicRoute";
 
@@ -14,7 +13,6 @@ function App() {
      return (
           <>
                <HashRouter>
-                    {/* <AppRouters /> */}
                     <Routes>
                          <Route index path={START_ROUTE} element={
                               <PublicRoute restricted={false}>
