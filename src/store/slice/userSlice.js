@@ -9,6 +9,9 @@ const userSlice = createSlice({
      reducers: {
           handleAuth(state, action) {
                state.userName = action.payload
+          },
+          logout(state, action) {
+               state.userName = action.payload
           }
      }
 })
