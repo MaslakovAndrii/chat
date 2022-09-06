@@ -12,6 +12,7 @@ const Chats = () => {
      const messages = currentRoom ? rooms[currentRoom].messages : [];
      const user = useSelector(state => state.contactsListReducer.contacts.find(user => user.id === currentRoom));
 
+     
      return (
           <div className='chats'>
                <Sidebar />

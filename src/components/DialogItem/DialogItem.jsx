@@ -23,6 +23,11 @@ const DialogItem = ({ user }) => {
 
      function openRoom() {
           dispatch(setRoom(id));
+          const sidebar = document.querySelector('.sidebar')
+
+          if(sidebar.className.includes('active')) {
+               sidebar.classList.remove('active')
+          } 
      }
 
 

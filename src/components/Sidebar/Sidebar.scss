@@ -1,15 +1,27 @@
 .sidebar {
-     flex: 0 1 500px;
+     // flex: 0 0 300px;
+     max-width: 400px;
      display: flex;
      flex-direction: column;
      border-right: 1px solid #bdbdbd;
      height: 100vh;
      &__header {
           min-height: 150px;
+          
      }
      &__dialogs {
           flex: 1 1 auto;
           overflow-y: hidden;
+     }
+     @media (max-width: 767.98px) {
+          background-color: #fff;
+          position: fixed;
+          z-index: 100;
+          transform: translateX(-100%);
+          transition: transform 0.4s;
+          &.active  {
+               transform: translateX(0%);
+          }
      }
 }
 

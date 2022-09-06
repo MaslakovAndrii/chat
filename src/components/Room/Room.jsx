@@ -19,22 +19,43 @@ const Room = ({ messages, user }) => {
                block: 'end',
           });
      }
+
+     function handleOpenSidebar() {
+          const sidebar = document.querySelector('.sidebar')
+
+          if(!sidebar.className.includes('active')) {
+               sidebar.classList.add('active');
+          } else sidebar.classList.remove('active')
+
+     }
+
+     // function closeSidebar() {
+     //      const sidebar = document.querySelector('.sidebar')
+
+     //      if(sidebar.className.includes('active')) {
+     //           sidebar.classList.remove('active')
+     //      }
+     // }
+
      useEffect(() => {
           lastMessageScroll();
      }, [messages])
 
      return (
-          <div className='room'>
-               <section className='room__top'>
-                    {user.isActive
-                         ? <AvatarIsActive src={user.avatar} />
-                         : <Avatar sx={{
-                              width: '45px',
-                              height: '45px',
-                         }}
-                              alt={`avatar ${fullName}`}
-                              src={user.avatar} />}
-                    <h2 className='room__full-name'>{fullName}</h2>
+          <div className='room' >
+               <section className='room__top top'>
+                    <div className='top__burger' onClick={handleOpenSidebar}><span></span></div>
+                    <div className='top__content'>
+                         {user.isActive
+                              ? <AvatarIsActive src={user.avatar} />
+                              : <Avatar sx={{
+                                   width: '45px',
+                                   height: '45px',
+                              }}
+                                   alt={`avatar ${fullName}`}
+                                   src={user.avatar} />}
+                         <h2 className='top__full-name'>{fullName}</h2>
+                    </div>
                </section>
                <section className='room__chat chat'>
                     <div className='chat__container'>
